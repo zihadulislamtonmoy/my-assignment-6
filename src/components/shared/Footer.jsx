@@ -4,7 +4,7 @@ import Image from 'next/image';
 
 const Footer = () => {
     return (
-        <footer className=" flex justify-between footer sm:footer-horizontal footer-center bg-base-300 text-base-content p-4">
+        <footer className=" bg-[#0b0c0f]  flex justify-between footer sm:footer-horizontal footer-centers text-base-content p-8">
             <div className="flex items-center">
                       <Image
                         src={logo}
