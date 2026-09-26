@@ -1,16 +1,14 @@
 import React from "react";
 import LibraryCard from "../shared/LibraryCard";
 
-const getData = async () => {
+const getWorkout = async () => {
   const response = await fetch("https://api.abcz.workers.dev/api/fitlog");
   const data = await response.json();
   return data;
 };
 
 const Library = async () => {
-  const libraryData = await getData();
-
-  console.log(libraryData, "libraryData");
+  const workoutData = await getWorkout();
 
   return (
     <section className="bg-[#0b0c0f] px-4 py-8 sm:px-6 lg:px-8">
@@ -27,12 +25,12 @@ const Library = async () => {
 
         
         <div className="grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-3">
-          {libraryData.map((library) => (
-            <button key={library.id}>
+          {workoutData.map((workout) => (
+            <button key={workout.id}>
 
             <LibraryCard
-              key={library.id}
-              library={library}
+              key={workout.id}
+              workout={workout}
             />
 
             </button>
@@ -45,3 +43,4 @@ const Library = async () => {
 };
 
 export default Library;
+

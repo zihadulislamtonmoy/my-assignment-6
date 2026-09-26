@@ -1,14 +1,14 @@
 import Image from "next/image";
 import React from "react";
 
-const LibraryCard = ({ library }) => {
+const LibraryCard = ({ workout }) => {
   return (
     <div className="overflow-hidden rounded-2xl border border-[#292c32] bg-[#15171c]">
 
       <div className="h-[220px] w-full overflow-hidden sm:h-[210px]">
         <Image
-          src={library.image}
-          alt={library.name}
+          src={workout.image}
+          alt={workout.name}
           width={740}
           height={500}
           className="h-full w-full object-cover"
@@ -20,7 +20,7 @@ const LibraryCard = ({ library }) => {
 
         
         <div className="mb-5 flex flex-wrap gap-2">
-          {library.muscleGroups
+          {workout.muscleGroups
             .slice(0, 2)
             .map((muscle) => (
               <span
@@ -34,12 +34,12 @@ const LibraryCard = ({ library }) => {
 
        
         <h3 className="text-2xl font-black uppercase leading-none text-white">
-          {library.name}
+          {workout.name}
         </h3>
 
        
         <p className="mt-3 text-sm text-[#858990]">
-          {library.equipment}
+          {workout.equipment}
         </p>
 
        
@@ -51,19 +51,19 @@ const LibraryCard = ({ library }) => {
          
           <div className="flex items-center gap-1.5">
             <span className="text-base">◷</span>
-            <span>{library.duration} min</span>
+            <span>{workout.duration} min</span>
           </div>
 
          
           <div className="flex items-center gap-1.5">
             <span className="text-base">●</span>
-            <span>{library.caloriesBurned} kcal</span>
+            <span>{workout.caloriesBurned} kcal</span>
           </div>
 
           
           <div className="flex items-center gap-1.5">
             <span className="text-base">☆</span>
-            <span>{library.rating}</span>
+            <span>{workout.rating}</span>
           </div>
 
         </div>
