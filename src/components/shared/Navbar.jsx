@@ -13,7 +13,7 @@ const Navbar = () => {
     <nav className="w-full border-b border-[#25272b] bg-[#0b0c0f]">
       <div className="mx-auto flex h-[52px] max-w-[1000px] items-center justify-between px-4">
 
-        {/* Logo */}
+       
         <Link href="/">
           <Image
             src={logo}
@@ -24,7 +24,7 @@ const Navbar = () => {
           />
         </Link>
 
-        {/* Navigation */}
+       
         <div className="flex items-center gap-2">
           <Link
             href="/"
@@ -41,7 +41,7 @@ const Navbar = () => {
           </Link>
         </div>
 
-        {/* Counters */}
+      
         <div className="flex items-center gap-3 text-[9px]">
           <Link href="/my-plan" className="flex items-center gap-1.5">
             <span className="text-[#85878c]">Plan</span>

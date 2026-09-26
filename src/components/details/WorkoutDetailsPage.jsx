@@ -1,4 +1,3 @@
-"use client";
 
 import Image from "next/image";
 import React from "react";
@@ -13,7 +12,7 @@ const WorkoutDetails = ({ workout }) => {
 
         <div className="grid grid-cols-1 gap-8 lg:grid-cols-2">
 
-          {/* Image */}
+         
           <div className="overflow-hidden rounded-xl">
             <Image
               src={workout.image}
@@ -24,7 +23,7 @@ const WorkoutDetails = ({ workout }) => {
             />
           </div>
 
-          {/* Details */}
+         
           <div>
 
             <h1 className="text-3xl font-black uppercase">
@@ -35,7 +34,7 @@ const WorkoutDetails = ({ workout }) => {
               {workout.description}
             </p>
 
-            {/* Tags */}
+           
             <div className="mt-4 flex flex-wrap gap-2">
               {workout.muscleGroups.map((muscle) => (
                 <span
@@ -47,7 +46,7 @@ const WorkoutDetails = ({ workout }) => {
               ))}
             </div>
 
-            {/* Specs */}
+           
             <div className="mt-6 rounded-xl bg-[#15171c]">
 
               <div className="flex justify-between border-b border-[#292c32] p-4">
@@ -115,7 +114,7 @@ const WorkoutDetails = ({ workout }) => {
 
             </div>
 
-            {/* Instructions */}
+           
             <div className="mt-6">
               <h2 className="text-sm font-black uppercase">
                 Instructions
@@ -134,7 +133,6 @@ const WorkoutDetails = ({ workout }) => {
               </ol>
             </div>
 
-            {/* Buttons */}
             <div className="mt-7 flex flex-wrap gap-3">
 
               <button
