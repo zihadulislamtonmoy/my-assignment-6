@@ -1,5 +1,5 @@
 import React from "react";
-import WorkoutDetails from "@/components/details/WorkoutDetails";
+import WorkoutDetails from "@/components/details/WorkoutDetailsPage";
 
 const getWorkout = async () => {
   const response = await fetch("https://api.abcz.workers.dev/api/fitlog");
@@ -11,9 +11,9 @@ const WorkoutDetailsPage = async ({ params }) => {
   const { id } = await params;
 
   const workoutData = await getWorkout(id);
-  const workout = workoutData.find(worlout => String(workout.id)===String(id))
+  const workout = workoutData.find(workout => String(workout.id)===String(id))
  
   return <WorkoutDetails workout={workout} />;
 };
 
-export default WorkoutDetailsPage;
+export default WorkoutDetailsPage; 
