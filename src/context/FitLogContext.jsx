@@ -9,7 +9,7 @@ export const FitLogProvider = ({ children }) => {
   const [plan, setPlan] = useState([]);
   const [saved, setSaved] = useState([]);
 
-  // Add to today's plan
+  
   const addToPlan = (workout) => {
     const alreadyAdded = plan.some(
       (item) => item.id === workout.id
@@ -30,7 +30,7 @@ export const FitLogProvider = ({ children }) => {
     toast.success("Added to today's plan");
   };
 
-  // Save for later
+ 
   const saveForLater = (workout) => {
     const alreadySaved = saved.some(
       (item) => item.id === workout.id
@@ -46,21 +46,21 @@ export const FitLogProvider = ({ children }) => {
     toast.success("Saved for later");
   };
 
-  // Remove from today's plan
+  
   const removeFromPlan = (id) => {
     setPlan(plan.filter((item) => item.id !== id));
 
     toast.success("Removed from today's plan");
   };
 
-  // Remove from saved
+ 
   const removeFromSaved = (id) => {
     setSaved(saved.filter((item) => item.id !== id));
 
     toast.success("Removed from saved");
   };
 
-  // Mark as done
+
   const markAsDone = (id) => {
     setPlan(
       plan.map((item) =>
@@ -92,4 +92,4 @@ export const FitLogProvider = ({ children }) => {
 
 export const useFitLog = () => {
   return useContext(FitLogContext);
-};
+}; 

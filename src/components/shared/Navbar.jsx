@@ -13,7 +13,7 @@ const Navbar = () => {
     <nav className="w-full border-b border-[#25272b] bg-[#0b0c0f]">
 
         
-      <div className="mx-auto flex h-[52px] max-w-[1300px] items-center justify-between px-4">
+      <div className="mx-auto flex h-[52px] max-w-[1200px] items-center justify-between px-4">
         
     <div className="flex items-center">
                               <Image
