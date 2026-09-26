@@ -11,19 +11,21 @@ const Navbar = () => {
 
   return (
     <nav className="w-full border-b border-[#25272b] bg-[#0b0c0f]">
-      <div className="mx-auto flex h-[52px] max-w-[1000px] items-center justify-between px-4">
 
-       
-        <Link href="/">
-          <Image
-            src={logo}
-            alt="FitLog"
-            width={85}
-            height={30}
-            className="w-[85px] object-contain"
-          />
-        </Link>
-
+        
+      <div className="mx-auto flex h-[52px] max-w-[1300px] items-center justify-between px-4">
+        
+    <div className="flex items-center">
+                              <Image
+                                src={logo}
+                                alt="FitnessLogo"
+                                width={85}
+                                height={30}
+                                className=" h-auto w-auto max-h-[30pxS] object-contain mx-auto"
+                              />
+                    
+                              <h2 className='font-bold m-1.5'>FITLOG</h2>
+                            </div>
        
         <div className="flex items-center gap-2">
           <Link
@@ -64,4 +66,4 @@ const Navbar = () => {
   );
 };
 
-export default Navbar;
+export default Navbar; 
