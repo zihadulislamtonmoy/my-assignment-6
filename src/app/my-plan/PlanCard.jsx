@@ -58,7 +58,7 @@ const PlanCard = ({ workout, activeTab }) => {
       <div className="flex items-center gap-2">
 
         <Link
-          href={`/workouts/${workout.id}`}
+          href={`/workout/${workout.id}`}
           className="rounded-full border border-[#36383d] px-4 py-2 text-[10px]"
         >
           View Details
